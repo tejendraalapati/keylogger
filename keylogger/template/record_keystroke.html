@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="{% url 'record_keystroke' %}">
+        {% csrf_token %}
+        <label for="key_pressed">Enter Key:</label>
+        <input type="text" name="key_pressed" maxlength="1" required>
+        <button type="submit">Record Keystroke</button>
+    </form>    
+</body>
+</html>
